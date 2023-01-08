@@ -20,6 +20,7 @@ plot(t,x,'.');
 title('signal x(t) :');
 ```
 
+<img width="378" alt="1" src="https://user-images.githubusercontent.com/121026257/211154915-9f4afe77-9473-42b1-8ab9-1973ec432354.PNG">
 Pour approximer la TF continue d’un signal x(t), représenté suivant un pas Te, on utilise les deux commandes : fft et fftshift.
 + On remarquera que la TF est une fonction complexe et que la fonction ainsi obtenue décrit la TF de x(t) entre –1/(2Te) et 1/(2Te) par pas de 1/(nTe) où n est le nombre de points constituant le signal x(t).
 +  La commande *fft* codant les fréquences positives sur les n/2 premières valeurs du signal et les valeurs négatives entre n/2+1 et n, la commande fftshift permet de les inverser.
