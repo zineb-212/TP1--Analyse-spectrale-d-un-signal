@@ -20,7 +20,7 @@ plot(t,x,'.');
 title('signal x(t) :');
 ```
 
-<img width="378" alt="1" src="https://user-images.githubusercontent.com/121026257/211154915-9f4afe77-9473-42b1-8ab9-1973ec432354.PNG">
+
 Pour approximer la TF continue d’un signal x(t), représenté suivant un pas Te, on utilise les deux commandes : fft et fftshift.
 + On remarquera que la TF est une fonction complexe et que la fonction ainsi obtenue décrit la TF de x(t) entre –1/(2Te) et 1/(2Te) par pas de 1/(nTe) où n est le nombre de points constituant le signal x(t).
 +  La commande *fft* codant les fréquences positives sur les n/2 premières valeurs du signal et les valeurs négatives entre n/2+1 et n, la commande fftshift permet de les inverser.
@@ -32,12 +32,17 @@ f =(0:N-1)*(fe/N); %frequence du spectre
  plot(f,abs(y));
  title('le spectre Amplitude avec fft');
 ```
+
+
 **3-Pour mieux visualiser le contenu fréquentiel du signal, utilisons la fonction *fftshift*, qui effectue un décalage circulaire centré sur zéro du spectre en amplitude obtenu par la commande *fft***
 ```matlab
  fshift = (-N/2:N/2-1)*(fe/N);
  plot(fshift,fftshift(abs(y)));
 title('spectre du  x(t) apres fftshift():');
 ```
+
+
+
 **4-Introduction d'un bruit blanc gaussien dans le signal x(t) et sa visualisation**
 ```matlab
 bruit = 20*randn(size(x)); %bruit
@@ -45,6 +50,9 @@ xnoise = x+bruit; % signal+bruit
 plot(xnoise);
 title('signal bruité')
 ```
+
+
+
 **5-Commande *Sound* pour ecouter le signal bruité et non bruité**
 ```matlab
 sound(x) %le signal
