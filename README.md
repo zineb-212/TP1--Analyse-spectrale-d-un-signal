@@ -1,5 +1,5 @@
 # TP1--Analyse spectrale d'un signal-Transformée de Fourier discrete
-## Objectif
+## Objectifs
 + Représentation de signaux et applications de la transformée de Fourier discrète
 (TFD) sous Matlab. 
 + Evaluation de l’intérêt du passage du domaine temporel au domaine fréquentiel 
@@ -20,7 +20,8 @@ plot(t,x,'.');
 title('signal x(t) :');
 ```
 <img width="810" alt="1" src="https://user-images.githubusercontent.com/121026257/211807053-81272c7a-fdad-4a72-82c7-3c68c10764de.PNG">
-Pour approximer la TF continue d’un signal x(t), représenté suivant un pas Te, on utilise les deux commandes : fft et fftshift.
+
+>Pour approximer la TF continue d’un signal x(t), représenté suivant un pas Te, on utilise les deux commandes : fft et fftshift.
 + On remarquera que la TF est une fonction complexe et que la fonction ainsi obtenue décrit la TF de x(t) entre –1/(2Te) et 1/(2Te) par pas de 1/(nTe) où n est le nombre de points constituant le signal x(t).
 +  La commande *fft* codant les fréquences positives sur les n/2 premières valeurs du signal et les valeurs négatives entre n/2+1 et n, la commande fftshift permet de les inverser.
 
@@ -65,7 +66,7 @@ https://user-images.githubusercontent.com/121026257/211811684-8f171466-7d58-4559
 https://user-images.githubusercontent.com/121026257/211812357-5e8aba9e-f0e3-4dcf-b283-af4373f2eb4d.mp4
 
 
-La puissance du signal en fonction de la fréquence (densité spectrale de puissance) est une métrique couramment utilisée en traitement du signal. Elle est définie comme étant le carré du module de la TFD, divisée par le nombre d'échantillons de fréquence
+>La puissance du signal en fonction de la fréquence (densité spectrale de puissance) est une métrique couramment utilisée en traitement du signal. Elle est définie comme étant le carré du module de la TFD, divisée par le nombre d'échantillons de fréquence
 
 **6-Calcul et representation spectral de puissance du signal bruité centré a la frequence 0**
 ```matlab
@@ -88,9 +89,9 @@ plot(fshift,fftshift(abs(ybruit)));
 
 <img width="825" alt="7" src="https://user-images.githubusercontent.com/121026257/211814515-ac4b2cf3-8c29-4ea1-a37e-364441a87620.PNG">
 
-il est observable que l'augmentation de l'intensite du bruit entraine la perte du signal informatif
+>il est observable que l'augmentation de l'intensite du bruit entraine la perte du signal informatif
 ## Analyse fréquentielle du chant du rorqual bleu
-Il existe plusieurs signaux dont l’information est encodée dans des sinusoïdes. Les ondes sonores est un bon exemple. Considérons maintenant des données audios collectées à partir de microphones sous - marins au large de la Californie. On cherche à détecter à travers une analyse de Fourier le contenu fréquentiel d’une onde sonore émise pas un rorqual bleu.
+>Il existe plusieurs signaux dont l’information est encodée dans des sinusoïdes. Les ondes sonores est un bon exemple. Considérons maintenant des données audios collectées à partir de microphones sous - marins au large de la Californie. On cherche à détecter à travers une analyse de Fourier le contenu fréquentiel d’une onde sonore émise pas un rorqual bleu.
 
 **1-Chargement du fichier *bluewhale.au* contenant le sous-ensemble de données qui correspond au chant du rorqual bleu du Pacifique avec la commande *audioread***
 ```matlab
@@ -113,7 +114,7 @@ https://user-images.githubusercontent.com/121026257/211820326-1a23d0cf-d962-49df
 
 **3-Specification d'une nouvelle longueure du signal**
 
-La TFD peut être utilisée pour identifier les composantes fréquentielles de ce signal audio. Dans certaines applications qui traitent de grandes quantités de données avec *fft*, il est courant de redimensionner l'entrée de sorte que le nombre d'échantillons soit une puissance de 2. *fft* remplit automatiquement les données avec des zéros pour augmenter la taille de l'échantillon. Cela peut accélérer considérablement le calcul de la transformation
+>La TFD peut être utilisée pour identifier les composantes fréquentielles de ce signal audio. Dans certaines applications qui traitent de grandes quantités de données avec *fft*, il est courant de redimensionner l'entrée de sorte que le nombre d'échantillons soit une puissance de 2. *fft* remplit automatiquement les données avec des zéros pour augmenter la taille de l'échantillon. Cela peut accélérer considérablement le calcul de la transformation
 ```matlab
 dsp_chant = (abs(fft(chant)).^2)/N;
 f = (0:floor(N/2))*(fs/N)/10;
@@ -124,7 +125,9 @@ title('Spectre')
 <img width="807" alt="8" src="https://user-images.githubusercontent.com/121026257/211820825-83e59c51-124c-4619-9973-612431135b89.PNG">
 
 **4-Determination de la frequence fondamentale du gémissement du rorqual bleu**
-il est observable que c'est la frequence du 1er pic entre *16Hz* et *17Hz*
+>Il est observable que c'est la frequence du 1er pic entre *16Hz* et *17Hz*
+
+<img width="811" alt="9" src="https://user-images.githubusercontent.com/121026257/211821126-7f67156a-4504-4b98-b1d1-4227eb8f49af.PNG">
 
 ## Réaliser : par M'HIFED Zineb
 
