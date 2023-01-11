@@ -108,6 +108,9 @@ ts=1/fs;
 t=(0:N-1)*(10*ts);
 plot(t,chant);
 ```
+
+https://user-images.githubusercontent.com/121026257/211820326-1a23d0cf-d962-49df-b5d8-a884804754b8.mp4
+
 **3-Specification d'une nouvelle longueure du signal**
 
 La TFD peut être utilisée pour identifier les composantes fréquentielles de ce signal audio. Dans certaines applications qui traitent de grandes quantités de données avec *fft*, il est courant de redimensionner l'entrée de sorte que le nombre d'échantillons soit une puissance de 2. *fft* remplit automatiquement les données avec des zéros pour augmenter la taille de l'échantillon. Cela peut accélérer considérablement le calcul de la transformation
@@ -115,7 +118,7 @@ La TFD peut être utilisée pour identifier les composantes fréquentielles de c
 dsp_chant = (abs(fft(chant)).^2)/N;
 f = (0:floor(N/2))*(fs/N)/10;
 plot(f,dsp_chant(1:floor(N/2)+1))
-title('le spectre')
+title('Spectre')
 ```
 **4-Determination de la frequence fondamentale du gémissement du rorqual bleu**
 il est observable que c'est la frequence du 1er pic entre *16Hz* et *17Hz*
