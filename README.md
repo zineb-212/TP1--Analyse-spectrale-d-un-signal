@@ -26,10 +26,10 @@ Pour approximer la TF continue d’un signal x(t), représenté suivant un pas T
 
 **2-Calcul de la TFD du signal et representation spectral**
 ```matlab
-f =(0:N-1)*(fe/N); %frequence du spectre
+ f =(0:N-1)*(fe/N); %frequence du spectre
  y = fft(x); % y: spectre , fft(x) : transformee de fourier
  plot(f,abs(y));
- title('le spectre Amplitude avec fft');
+ title('le spectre de x(t):');
 ```
 <img width="828" alt="2" src="https://user-images.githubusercontent.com/121026257/211807507-79af602f-b426-4a4e-91fd-b51a3c17af9f.PNG">
 
@@ -37,7 +37,7 @@ f =(0:N-1)*(fe/N); %frequence du spectre
 ```matlab
  fshift = (-N/2:N/2-1)*(fe/N);
  plot(fshift,fftshift(abs(y)));
-title('spectre du x(t):');
+ title('spectre de x(t):');
 ```
 <img width="843" alt="3" src="https://user-images.githubusercontent.com/121026257/211808168-0887bf15-76f1-4a0f-97c8-08ee9ad1fc02.PNG">
 
@@ -61,6 +61,7 @@ https://user-images.githubusercontent.com/121026257/211811684-8f171466-7d58-4559
 
 *Son bruité*
 
+https://user-images.githubusercontent.com/121026257/211812357-5e8aba9e-f0e3-4dcf-b283-af4373f2eb4d.mp4
 
 
 La puissance du signal en fonction de la fréquence (densité spectrale de puissance) est une métrique couramment utilisée en traitement du signal. Elle est définie comme étant le carré du module de la TFD, divisée par le nombre d'échantillons de fréquence
