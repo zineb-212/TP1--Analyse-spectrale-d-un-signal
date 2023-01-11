@@ -39,8 +39,7 @@ f =(0:N-1)*(fe/N); %frequence du spectre
  plot(fshift,fftshift(abs(y)));
 title('spectre du x(t):');
 ```
-
-
+<img width="843" alt="3" src="https://user-images.githubusercontent.com/121026257/211808168-0887bf15-76f1-4a0f-97c8-08ee9ad1fc02.PNG">
 
 **4-Introduction d'un bruit blanc gaussien dans le signal x(t) et sa visualisation**
 ```matlab
