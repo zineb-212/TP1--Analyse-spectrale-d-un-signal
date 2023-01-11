@@ -92,14 +92,16 @@ il est observable que l'augmentation de l'intensite du bruit entraine la perte d
 ## Analyse fréquentielle du chant du rorqual bleu
 Il existe plusieurs signaux dont l’information est encodée dans des sinusoïdes. Les ondes sonores est un bon exemple. Considérons maintenant des données audios collectées à partir de microphones sous - marins au large de la Californie. On cherche à détecter à travers une analyse de Fourier le contenu fréquentiel d’une onde sonore émise pas un rorqual bleu.
 
-**1-Lecture du fichier *bluewhale.au* contenant le sous-ensemble de données qui correspond au chant du rorqual bleu du Pacifique avec la commande *audioread***
+**1-Chargement du fichier *bluewhale.au* contenant le sous-ensemble de données qui correspond au chant du rorqual bleu du Pacifique avec la commande *audioread***
 ```matlab
 [x,fs] = audioread("bluewhale.au");
 chant = x(2.45e4:3.10e4);
 ```
-**2-visualisation du signal**
+**2-Lecture et visualisation du signal**
 ```matlab
+%lecture
 sound(x,fs)
+%Visualisation
 chant = x(2.45e4:3.10e4);
 N=length(chant);
 ts=1/fs;
