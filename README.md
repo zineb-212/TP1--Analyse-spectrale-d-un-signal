@@ -55,7 +55,13 @@ title('signal bruité')
 sound(x) %le signal
 sound(xnoise) %le signal bruité
 ```
-*Son non bruité*
+*Son non bruité:*
+
+https://user-images.githubusercontent.com/121026257/211811684-8f171466-7d58-4559-a65e-710e00a44f50.mp4
+
+*Son bruité*
+
+
 
 La puissance du signal en fonction de la fréquence (densité spectrale de puissance) est une métrique couramment utilisée en traitement du signal. Elle est définie comme étant le carré du module de la TFD, divisée par le nombre d'échantillons de fréquence
 
