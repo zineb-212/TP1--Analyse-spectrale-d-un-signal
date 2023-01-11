@@ -31,13 +31,13 @@ f =(0:N-1)*(fe/N); %frequence du spectre
  plot(f,abs(y));
  title('le spectre Amplitude avec fft');
 ```
-
+<img width="828" alt="2" src="https://user-images.githubusercontent.com/121026257/211807507-79af602f-b426-4a4e-91fd-b51a3c17af9f.PNG">
 
 **3-Pour mieux visualiser le contenu fréquentiel du signal, utilisons la fonction *fftshift*, qui effectue un décalage circulaire centré sur zéro du spectre en amplitude obtenu par la commande *fft***
 ```matlab
  fshift = (-N/2:N/2-1)*(fe/N);
  plot(fshift,fftshift(abs(y)));
-title('spectre du  x(t) apres fftshift():');
+title('spectre du x(t):');
 ```
 
 
