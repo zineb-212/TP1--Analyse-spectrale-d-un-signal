@@ -48,8 +48,7 @@ xnoise = x+bruit; % signal+bruit
 plot(xnoise);
 title('signal bruité')
 ```
-
-
+<img width="819" alt="4" src="https://user-images.githubusercontent.com/121026257/211808481-b6e63adf-806f-44df-8c16-050e8cee0fec.PNG">
 
 **5-Commande *Sound* pour ecouter le signal bruité et non bruité**
 ```matlab
