@@ -129,11 +129,10 @@ title('Spectre')
 
 <img width="811" alt="9" src="https://user-images.githubusercontent.com/121026257/211821126-7f67156a-4504-4b98-b1d1-4227eb8f49af.PNG">
 
-## Réalisé : par M'HIFED Zineb
-
-## Spécialité : Robotique et Cobotique
-
-## Sous la supervision de : Pr AMMOUR Alae
+# Réalisation 
+#### Par : M'HIFED Zineb
+#### Spécialité : Robotique et Cobotique
+#### Sous la supervision de : Pr AMMOUR Alae
 
 
 
