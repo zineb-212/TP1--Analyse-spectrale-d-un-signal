@@ -85,6 +85,9 @@ fshift = (-N/2:N/2-1)*(fe/N);
 ybruit = fft(xnoise);
 plot(fshift,fftshift(abs(ybruit)));
 ```
+
+<img width="825" alt="7" src="https://user-images.githubusercontent.com/121026257/211814515-ac4b2cf3-8c29-4ea1-a37e-364441a87620.PNG">
+
 il est observable que l'augmentation de l'intensite du bruit entraine la perte du signal informatif
 ## Analyse fréquentielle du chant du rorqual bleu
 Il existe plusieurs signaux dont l’information est encodée dans des sinusoïdes. Les ondes sonores est un bon exemple. Considérons maintenant des données audios collectées à partir de microphones sous - marins au large de la Californie. On cherche à détecter à travers une analyse de Fourier le contenu fréquentiel d’une onde sonore émise pas un rorqual bleu.
