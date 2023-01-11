@@ -75,6 +75,8 @@ ybruit = fft(xnoise);
 plot(fshift,fftshift(abs(ybruit)));
 ```
 
+<img width="821" alt="6" src="https://user-images.githubusercontent.com/121026257/211814204-343efff0-c273-4a15-84b9-6f2c55cd9e9d.PNG">
+
 **7-Augmentation de l'intensité du bruit et sa representation spectrale**
 ```matlab
 bruit = 50*randn(size(x));%bruit
