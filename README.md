@@ -120,6 +120,9 @@ f = (0:floor(N/2))*(fs/N)/10;
 plot(f,dsp_chant(1:floor(N/2)+1))
 title('Spectre')
 ```
+
+<img width="807" alt="8" src="https://user-images.githubusercontent.com/121026257/211820825-83e59c51-124c-4619-9973-612431135b89.PNG">
+
 **4-Determination de la frequence fondamentale du gémissement du rorqual bleu**
 il est observable que c'est la frequence du 1er pic entre *16Hz* et *17Hz*
 
